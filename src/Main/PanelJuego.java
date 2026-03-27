@@ -1,12 +1,42 @@
 package Main;
 
+import inputs.keyBoardInputs;
+import inputs.mouseInputs;
+
 import javax.swing.*;
 import java.awt.*;
 
 //esto es como el lienzo del juego
 public class PanelJuego extends JPanel {
+
+    private mouseInputs MouseInputs;
+    private int xDelta = 100, yDelta = 100;
+
     public PanelJuego() {
 
+        MouseInputs = new mouseInputs(this);
+        addKeyListener(new keyBoardInputs(this));
+        addMouseListener(MouseInputs);
+        addMouseMotionListener(MouseInputs);
+
+    }
+
+    //gracias a este metodo se podra mover el rectangulo en una direccion
+    public void changeXDelta(int valor){
+        this.xDelta += valor;
+        repaint();
+    }
+
+    //gracias a este metodo se podra mover el rectangulo en una direccion
+    public void changeYDelta(int valor){
+        this.yDelta += valor;
+        repaint();
+    }
+
+    public void setRectPos(int x, int y){
+        this.xDelta = x;
+        this.yDelta = y;
+        repaint();
     }
 
     //con la clase Graphics podemos pintar dentro de la pantalla del juego
@@ -18,8 +48,6 @@ public class PanelJuego extends JPanel {
         super.paintComponent(g);
 
         //esto dibuja el cuadrado tambien por dentro, no solo los bordes
-        g.fillRect(100, 100, 200, 50);
-
-
+        g.fillRect(xDelta, yDelta, 200, 50);
     }
 }

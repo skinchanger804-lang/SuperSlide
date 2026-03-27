@@ -18,6 +18,9 @@ public class PantallaJuego extends JFrame {
         //tenemos que añadir "la pintura al lienzo"
         this.add(panelJuego);
 
+        //esto hace que el recuadro aparezca en el centro de la pantalla
+        this.setLocationRelativeTo(null);
+
         //tiene que estar al fondo porque si no se buggea con el tamaño y no se nada
         this.setVisible(true);
     }

@@ -8,6 +8,8 @@ public class Juego {
     public Juego() {
         panelJuego = new PanelJuego();
         pantallaJuego = new PantallaJuego(panelJuego);
+        //esto va a leer el input del teclado; es decir, lee las teclas que pulsamos
+        panelJuego.requestFocus();
 
 
     }
