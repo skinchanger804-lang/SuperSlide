@@ -24,4 +24,5 @@ public class PantallaJuego extends JFrame {
         //tiene que estar al fondo porque si no se buggea con el tamaño y no se nada
         this.setVisible(true);
     }
+    //nigger
 }

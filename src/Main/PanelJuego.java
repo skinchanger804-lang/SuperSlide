@@ -50,4 +50,5 @@ public class PanelJuego extends JPanel {
         //esto dibuja el cuadrado tambien por dentro, no solo los bordes
         g.fillRect(xDelta, yDelta, 200, 50);
     }
+    //nigger
 }

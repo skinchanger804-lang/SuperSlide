@@ -49,4 +49,5 @@ public class mouseInputs implements MouseListener, MouseMotionListener {
     public void mouseMoved(MouseEvent e) {
         panelJuego.setRectPos(e.getX(), e.getY());
     }
+    //nigger
 }
